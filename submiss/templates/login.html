@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+<div  style="background: radial-gradient(#edfda3d0 30%, #f0aa12e9 100%);
+    width: 100%;
+    min-height: 100vh;">
+<div class="container">
+  <div class="text-center">
+    <h1>Login</h1>
+  </div>
+  <form method="POST">
+    {{ form.hidden_tag() }}
+    <div class="form-group">
+      {{ form.teamname.label(class="form-group") }}
+      {{form.teamname(class='form-control')  }}
+    </div>
+    <div class="form-group">
+      {{ form.password.label(class="form-group") }}
+      {{form.password(class='form-control')  }}
+    </div>
+    <div class="form-group text-center">
+        {{ form.submit(class="btn btn-danger") }}
+    </div>
+
+  </form>
+</div>
+</div>
+{% endblock %}
